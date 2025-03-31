@@ -1,0 +1,155 @@
+
+@import "TailwindCSS";
+
+
+/* Animación foto */
+.img-contenido{
+    position: relative;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-property: transform;
+    transition-duration: 3s;
+  }
+.img-contenido img{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid var(--secundario); 
+    object-fit: cover;      
+}
+
+.animation-lines{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #30415d;
+    border-bottom: .2rem solid #30415d;
+    border-left: .2rem solid #eac67a;
+    border-right: .2rem solid #eac67a; 
+    animation: circuloFoto 8s linear infinite;
+  }
+  @keyframes circuloFoto {
+    100%{
+ 
+       transform: translate(-50%, -50%) rotate(360deg);
+    }
+ }
+
+
+.dark-mode{
+   background-color: #e2e8f0;
+   color: black;  
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4{
+   color: #364153
+}
+
+.dark-mode p,
+.dark-mode section p,
+.dark-mode ul{
+   color:#62748e;
+   font-weight:500;
+}
+.dark-mode section svg{
+     stroke:#5d62e1
+}
+.dark-mode footer svg:not(.btn-copy svg, .email-btn svg){
+    stroke:#5d62e1
+}
+
+.dark-mode .proyectos-varios >div{
+    border: 1px solid #62748e
+}
+.dark-mode .proyectos-varios:hover >div{
+   box-shadow: 1px 1px 5px #5d62e1; 
+   transition: box-shadow;
+   transition-duration: .3s;
+   transition-timing-function: ease-in-out;
+}
+
+.dark-mode .dark-mode-btn svg{
+   fill: #364153;
+}
+.dark-mode .btn-experiencia:hover{
+   color:#5d62e1;
+   background-color:#e2e8f0;
+   box-shadow: 1px 1px 5px #5d62e1;
+   
+}
+.dark-mode .btn-experiencia:hover svg{
+   stroke: #5d62e1;
+}
+.dark-mode .email-text{
+   background: #62748e;
+   color:#e2e8f0
+}
+.dark-mode .github{
+   border: 1px solid #010409;  
+}
+.dark-mode .github:hover{
+   background-color: #010409;
+   transition: background-color .5s ease-in-out;
+}
+.dark-mode .github img{
+   background-color:#010409;
+   border-radius:50%;
+}
+.dark-mode .github span{
+   color:#010409  
+}
+.dark-mode .github:hover span{
+   color:#fff ;
+   transition: color .5s ease-in-out;   
+}
+
+.dark-mode .link:hover{
+   background-color: #0A66C2;
+   transition: background-color .5s ease-in-out;
+}
+.dark-mode .link img{
+   background-color:#fff;
+   border-radius:50%;
+}
+.dark-mode .link:hover span{
+   color:#fff ;
+   transition: color .5s ease-in-out;   
+}
+
+.visible{
+   opacity: 1;
+   margin: 0 auto;
+   background-color: #0f172b;
+   transition-property: background-color;
+   transition-timing-function: ease-in-out;
+   transition-duration: .3s;
+}
+
+.visible-text{
+   opacity: 1;
+   transition-property: opacity;
+   transition-timing-function: ease-in-out;
+   transition-duration: .3s;
+}
+.visible-btn{
+  opacity:1;
+}
+.btnUp-show{
+   opacity:1;
+   transition-property: opacity;
+   transition-duration: .5s;
+   transition-timing-function: ease-in-out; 
+}
